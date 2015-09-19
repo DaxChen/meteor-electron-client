@@ -1,0 +1,35 @@
+{
+  "name": "meteor-electron-client",
+  "version": "0.1.0",
+  "description": "A boilerplate to use meteor to build desktop apps!",
+  "main": "./electron/main.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuHuaiChen/meteor-electron-client.git"
+  },
+  "keywords": [
+    "meteor",
+    "electron",
+    "meteor-build-client"
+  ],
+  "author": "YuHuaiChen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YuHuaiChen/meteor-electron-client/issues"
+  },
+  "homepage": "https://github.com/YuHuaiChen/meteor-electron-client#readme",
+  "devDependencies": {
+    "asar": "^0.8.0",
+    "del": "^2.0.2",
+    "electron-packager": "^5.1.0",
+    "electron-prebuilt": "^0.33.0",
+    "gulp": "^3.9.0",
+    "gulp-shell": "^0.4.3",
+    "meteor-build-client": "^0.1.6",
+    "yargs": "^3.25.0"
+  }
+}
