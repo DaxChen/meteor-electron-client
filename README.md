@@ -36,6 +36,12 @@ You need gulp to build:
 npm install -g gulp
 ```
 
+Try the demo app!
+
+```
+gulp
+```
+
 you may want to remove `.git` with `rm -rf .git/`  
 
 Now, just develop your meteor app as usual in the `meteor/` subdirectory, add any package as you like!  
