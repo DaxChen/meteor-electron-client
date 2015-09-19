@@ -3,7 +3,7 @@ A boilerplate to use meteor to build desktop apps!
 
 ## Why build Electron apps with Meteor?
 
-[Watch this video!](https://youtu.be/Xgb9NTxPqVY)
+This project is inspired by [this video!](https://youtu.be/Xgb9NTxPqVY)
 
 Meteor is a great tool for automating all the things you need to do
 while building even client side apps. It uglify, concat, minify all
