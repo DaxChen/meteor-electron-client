@@ -91,6 +91,8 @@ After you're done developing...
 
 Name and put your icon in the project root as /icon.icns
 
+>If you use https://iconverticons.com/online/ to convert images, click on the triangle and choose icns file, instead of icns(finder ready)
+
 To package the electron app, run:
 
 ```
@@ -107,6 +109,13 @@ gulp build --platform="win32" --arch="x64" --name="YOUR_APP_NAME"
 
 `--platform`: Allowed values: `linux`, `win32`, `darwin`, `all`.
 `--arch`: Allowed values: `ia32`, `x64`, `all`.
+
+### Building windows apps from non-windows platforms
+
+If you get the `[Error: spawn wine ENOENT]` error while building for windows,
+it's because you need wine.
+
+>If you run this on windows and you want to set the icon for your app using the --icon option, it requires running a thing called rcedit.exe (via [this](https://github.com/atom/node-rcedit)), which means you will need to install wine and have it available in your path. To do this on Mac OS you can brew install wine.
 
 
 More informations on the options for packaging: [docs of electron-packager](https://github.com/maxogden/electron-packager)

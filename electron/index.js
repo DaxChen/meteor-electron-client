@@ -1,4 +1,5 @@
 var app = require('app');
+var Menu = require('menu');
 var BrowserWindow = require('browser-window');
 
 app.on('ready', function() {

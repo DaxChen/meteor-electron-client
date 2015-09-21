@@ -63,7 +63,7 @@ gulp.task('build-electron', ['copy-all'], function() {
     platform: [argv.platform], // optional if "all" is set true
     arch: argv.arch,
     version: '0.33.0',
-    // icon: 'icon', // ignore the file extension, packager will do the job!
+    icon: 'icon.icns', // ignore the file extension, packager will do the job!
     // uncomment the following line if anything you want to ignore (Regex)
     // ignore: './electron/node_modules/*',
     // prune: true,
@@ -85,7 +85,7 @@ gulp.task('build-electron-all', ['copy-all'], function() {
     name: (argv.name ? argv.name : 'MyApp'),
     all: true, // true will build linux, win32, darwin. with ia32, x64
     version: '0.33.0',
-    // icon: 'icon', // ignore the file extension, packager will do the job!
+    icon: 'icon.icns', // ignore the file extension, packager will do the job!
     // uncomment the following line if anything you want to ignore (Regex)
     // ignore: './electron/node_modules/*',
     // prune: true,
