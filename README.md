@@ -11,8 +11,9 @@ your javascript and CSS for you, and live reload while developing.
 
 In the old days you have to write lots of code using maybe Grunt or
 gulp to achieve this. Furthermore, meteor provides a great ecosystem
-for managing packages, by simply typing `meteor add react`, and
-you're ready! No more Yeoman generator!
+for managing packages, by simply running `meteor add react`, and
+it just works! No more bower install, copy paste link and script tags,
+no more Yeoman generator!
 
 
 ## How to use
@@ -90,7 +91,7 @@ After you're done developing...
 
 Name and put your icon in the project root as /icon.icns
 
-To build the electron app, run:
+To package the electron app, run:
 
 ```
 gulp build-all --name="YOUR_APP_NAME"
@@ -113,8 +114,8 @@ More informations on the options for packaging: [docs of electron-packager](http
 
 ## Why `Meteor.disconnect()`?
 
-**NOTE: You need to comment this to have meteor live-reload working**
-and uncomment is before build!
+**NOTE: You need to comment this to have meteor's live-reload while developing**
+and uncomment this before build!
 
 As mentioned in the [video](https://youtu.be/Xgb9NTxPqVY) described
 previously, disconnecting to the server makes this page static, and
