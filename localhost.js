@@ -1,3 +1,8 @@
+/**
+ * This file is only for previewing your meteor app in electron.
+ * Won't be packaged, so don't edit this file, edit electron/index.js instead!
+ */
+
 var app = require('app');
 var BrowserWindow = require('browser-window');
 
@@ -7,7 +12,7 @@ app.on('ready', function() {
     width: 800,
     height: 600,
   });
-  mainWindow.loadUrl('file://' + __dirname + '/index.html');
+  mainWindow.loadUrl('http://localhost:3000');
   mainWindow.on('closed', function() {
     mainWindow = null;
   });

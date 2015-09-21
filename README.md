@@ -44,29 +44,71 @@ gulp
 
 you may want to remove `.git` with `rm -rf .git/`  
 
-Now, just develop your meteor app as usual in the `meteor/` subdirectory, add any package as you like!  
-When you're done...
 
-## Build!
+## Development
 
-To test and your app and start electron, run:
+### Meteor part:
+
+Now, just develop your meteor app as usual in the `meteor/` subdirectory, add any package as you like!
+
+Since it takes a long time for meteor to bundle, you won't want to bundle it
+ every time you make changes. So when you're developing on the meteor part, you
+ can just point your browser to localhost and use meteor's live-reload ability.
+If you want to preview it in electron, run:
+
+```
+gulp preview
+```
+
+this is simply a electron pointing to `localhost:3000` (edit `localhost.js` to change port).
+
+When you're done with meteor part, run:
 
 ```
 gulp
 ```
 
-Oh BTW, this won't live reload in electron, sorry...
+This will bundle up your meteor project into html, css and js, and run electron
+ to show you the result.
 
-Since it takes a long time for meteor to bundle, I don't think it's reasonable to `watch` file changes.
-Just use Meteor's live reload ability, and build it to electron when finish.
+### Electron part:
+
+To program the electron side, such as customizing the menu bar, multi-window app,
+ or some native packages, it's all inside the `electron/` subdirectory.
+You can run:
+
+```
+gulp watch
+```
+
+to have gulp watch the file changes, and reload application (⌘+R)
+
+
+## Build
+
+After you're done developing...
 
 Name and put your icon in the project root as /icon.icns
 
 To build the electron app, run:
 
 ```
-gulp build --name "YOUR_APP_NAME"
+gulp build-all --name="YOUR_APP_NAME"
 ```
+to build all platforms (win/linux/darwin and ia32/x64)
+
+or only some platform/arch, such as
+```
+gulp build --platform="darwin" --arch="x64" --name="YOUR_APP_NAME"
+gulp build --platform="linux" --arch="ia32" --name="YOUR_APP_NAME"
+gulp build --platform="win32" --arch="x64" --name="YOUR_APP_NAME"
+```
+
+`--platform`: Allowed values: `linux`, `win32`, `darwin`, `all`.
+`--arch`: Allowed values: `ia32`, `x64`, `all`.
+
+
+More informations on the options for packaging: [docs of electron-packager](https://github.com/maxogden/electron-packager)
 
 
 ## Why `Meteor.disconnect()`?
@@ -88,11 +130,24 @@ Or, you can delete `Meteor.disconnect()`, and modify the
 `meteor-build-client` part in the gulpfile, to add an additional
 `--server [YOUR_DOMAIN]` parameter.
 
+
+## Credits
+
+Thanks to
+
+[frozeman/meteor-build-client](https://github.com/frozeman/meteor-build-client)
+
+[maxogden/electron-packager](https://github.com/maxogden/electron-packager)
+
+[mafintosh/electron-prebuilt](https://github.com/mafintosh/electron-prebuilt)
+
+
 ## Contribution
 
 Contribution is very very welcomed!  
 I'm still learning to all these awesome technologies, so feel free to
 correct me with any mistakes : )
+
 
 ## LICENSE
 The MIT License (MIT)
